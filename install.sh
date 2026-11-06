@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Installe ou met à jour la skill mails-demandes-vers-todo pour Claude Code (macOS, Linux).
-# Usage : curl -fsSL https://raw.githubusercontent.com/gkcyan/mails-demandes-vers-todo/main/install.sh | bash
+# Installe ou met à jour la skill organisation-mail-todo pour Claude Code (macOS, Linux).
+# Usage : curl -fsSL https://raw.githubusercontent.com/gkcyan/organisation-mail-todo/main/install.sh | bash
 
 set -euo pipefail
 
-name="mails-demandes-vers-todo"
+name="organisation-mail-todo"
 tar_url="https://github.com/gkcyan/$name/archive/refs/heads/main.tar.gz"
 skills="$HOME/.claude/skills"
 dest="$skills/$name"

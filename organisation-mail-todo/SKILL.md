@@ -1,5 +1,5 @@
 ---
-name: mails-demandes-vers-todo
+name: organisation-mail-todo
 description: Organise une messagerie Outlook (Microsoft 365) et la relie à Microsoft To Do, à partir d'un paramétrage choisi par l'utilisateur. Se connecte à la messagerie, analyse les mails, propose une organisation en dossiers, classe les mails et crée les règles de rangement automatique, puis se connecte à To Do, crée les listes, le flux Power Automate (mail avec demande → tâche avec lien et échéance) et le tri des tâches. À utiliser dès que l'utilisateur demande de ranger ou d'organiser sa boîte mail, de créer des dossiers ou des règles Outlook, de créer des tâches To Do à partir de ses mails, de suivre les demandes reçues par mail, ou d'organiser To Do comme sa messagerie.
 metadata:
   author: Yannick GOUEDE

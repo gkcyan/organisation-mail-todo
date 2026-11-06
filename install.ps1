@@ -1,9 +1,9 @@
-# Installe ou met à jour la skill mails-demandes-vers-todo pour Claude Code (Windows).
-# Usage : irm https://raw.githubusercontent.com/gkcyan/mails-demandes-vers-todo/main/install.ps1 | iex
+# Installe ou met à jour la skill organisation-mail-todo pour Claude Code (Windows).
+# Usage : irm https://raw.githubusercontent.com/gkcyan/organisation-mail-todo/main/install.ps1 | iex
 
 $ErrorActionPreference = 'Stop'
 
-$name   = 'mails-demandes-vers-todo'
+$name   = 'organisation-mail-todo'
 $zipUrl = "https://github.com/gkcyan/$name/archive/refs/heads/main.zip"
 $skills = Join-Path $env:USERPROFILE '.claude\skills'
 $dest   = Join-Path $skills $name

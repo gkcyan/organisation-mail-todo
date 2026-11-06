@@ -1,4 +1,4 @@
-# mails-demandes-vers-todo
+# organisation-mail-todo
 
 Skill pour Claude qui organise une messagerie Outlook (Microsoft 365) et la relie à Microsoft To Do, à partir d'un paramétrage choisi par l'utilisateur.
 
@@ -28,32 +28,32 @@ Une seule commande télécharge la skill et la place dans le dossier des skills 
 **Windows** — dans PowerShell :
 
 ```powershell
-irm https://raw.githubusercontent.com/gkcyan/mails-demandes-vers-todo/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/gkcyan/organisation-mail-todo/main/install.ps1 | iex
 ```
 
 **macOS ou Linux** — dans un terminal :
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/gkcyan/mails-demandes-vers-todo/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/gkcyan/organisation-mail-todo/main/install.sh | bash
 ```
 
-Ensuite, fermer puis relancer Claude Code. Pour vérifier, taper `/` : `mails-demandes-vers-todo` doit apparaître dans la liste.
+Ensuite, fermer puis relancer Claude Code. Pour vérifier, taper `/` : `organisation-mail-todo` doit apparaître dans la liste.
 
-La commande installe la skill dans `.claude/skills/mails-demandes-vers-todo` de votre dossier utilisateur. Si une version était déjà installée, elle est déplacée dans `.claude/skills-sauvegardes` avant d'être remplacée.
+La commande installe la skill dans `.claude/skills/organisation-mail-todo` de votre dossier utilisateur. Si une version était déjà installée, elle est déplacée dans `.claude/skills-sauvegardes` avant d'être remplacée.
 
 ## Installation manuelle (Claude Code)
 
 1. Sur cette page, cliquer sur « Code », puis « Download ZIP ».
-2. Décompresser l'archive. Elle contient un dossier `mails-demandes-vers-todo-main`, et à l'intérieur un dossier `mails-demandes-vers-todo` avec `SKILL.md` et `parametrage-exemple.md`.
-3. Copier ce dossier intérieur `mails-demandes-vers-todo` dans le dossier des skills de Claude (créer le dossier `skills` s'il n'existe pas) :
+2. Décompresser l'archive. Elle contient un dossier `organisation-mail-todo-main`, et à l'intérieur un dossier `organisation-mail-todo` avec `SKILL.md` et `parametrage-exemple.md`.
+3. Copier ce dossier intérieur `organisation-mail-todo` dans le dossier des skills de Claude (créer le dossier `skills` s'il n'existe pas) :
    - Windows : `C:\Users\<nom d'utilisateur>\.claude\skills\`
    - macOS ou Linux : `~/.claude/skills/`
 4. Fermer puis relancer Claude Code.
-5. Vérifier : taper `/` dans Claude Code ; `mails-demandes-vers-todo` doit apparaître dans la liste.
+5. Vérifier : taper `/` dans Claude Code ; `organisation-mail-todo` doit apparaître dans la liste.
 
 ## Variante : application Claude (claude.ai ou bureau)
 
-1. Récupérer le dossier `mails-demandes-vers-todo` (étapes 1 et 2 de l'installation manuelle).
+1. Récupérer le dossier `organisation-mail-todo` (étapes 1 et 2 de l'installation manuelle).
 2. Le compresser en zip : le zip doit contenir le dossier, avec `SKILL.md` dedans.
 3. Dans Claude, ouvrir les réglages, rubrique des skills, et importer ce zip.
 
