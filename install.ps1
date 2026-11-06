@@ -26,7 +26,10 @@ try {
     New-Item -ItemType Directory -Force -Path $skills | Out-Null
     if (Test-Path $dest) {
         # Conserve la version précédente à côté, sans rien supprimer définitivement
-        $backup = "$dest.ancien-" + (Get-Date -Format 'yyyyMMdd-HHmmss')
+        # (hors du dossier skills, pour ne pas être chargée comme une seconde skill)
+        $backups = Join-Path $env:USERPROFILE '.claude\skills-sauvegardes'
+        New-Item -ItemType Directory -Force -Path $backups | Out-Null
+        $backup = Join-Path $backups ("$name-" + (Get-Date -Format 'yyyyMMdd-HHmmss'))
         Move-Item -Path $dest -Destination $backup
         Write-Host "Version précédente conservée dans : $backup"
     }

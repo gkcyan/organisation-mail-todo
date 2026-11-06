@@ -23,7 +23,9 @@ fi
 mkdir -p "$skills"
 if [ -e "$dest" ]; then
   # Conserve la version précédente à côté, sans rien supprimer définitivement
-  backup="$dest.ancien-$(date +%Y%m%d-%H%M%S)"
+  # (hors du dossier skills, pour ne pas être chargée comme une seconde skill)
+  mkdir -p "$HOME/.claude/skills-sauvegardes"
+  backup="$HOME/.claude/skills-sauvegardes/$name-$(date +%Y%m%d-%H%M%S)"
   mv "$dest" "$backup"
   echo "Version précédente conservée dans : $backup"
 fi
