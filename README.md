@@ -75,3 +75,7 @@ Relancer la commande d'installation rapide (ou refaire l'installation manuelle e
 - un mail déplacé par une règle Outlook avant la boîte de réception peut ne pas créer de tâche ;
 - deux mails reçus le même jour ont la même échéance ;
 - les tâches anciennes s'affichent « en retard », puisque l'échéance sert de date de réception.
+
+## Licence
+
+Licence MIT — voir le fichier [LICENSE](LICENSE). Copyright (c) 2026 Yannick GOUEDE.
