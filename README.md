@@ -1,15 +1,19 @@
 # mails-demandes-vers-todo
 
-Skill pour Claude qui transforme les mails Outlook (Microsoft 365) contenant une demande en tâches Microsoft To Do, rangées par thème et triées par date de réception.
+Skill pour Claude qui organise une messagerie Outlook (Microsoft 365) et la relie à Microsoft To Do, à partir d'un paramétrage choisi par l'utilisateur.
 
 Auteur : Yannick GOUEDE
 
 ## Ce que fait la skill
 
-- crée dans To Do une liste par thème, calquée sur les dossiers de la messagerie ;
-- crée un flux Power Automate : chaque nouveau mail « demande » devient une tâche, rangée dans la bonne liste, avec un lien vers le mail et une échéance égale à la date de réception + 1 jour ;
-- rattrape les mails récents en les marquant d'un indicateur ;
-- trie chaque liste de la tâche la plus récente à la plus ancienne.
+1. **Connexion à la messagerie** Outlook web (vous vous connectez vous-même, aucun mot de passe n'est saisi par Claude).
+2. **Analyse** des mails et **proposition d'organisation** : dossiers par thème, sous-dossiers, critères.
+3. **Paramétrage à votre choix** : vous acceptez, modifiez ou remplacez la proposition (modèle dans `parametrage-exemple.md`). Rien n'est appliqué avant votre accord.
+4. **Rangement** des mails existants et **règles automatiques** Outlook pour les suivants.
+5. **Connexion à To Do**, création des listes et d'un flux Power Automate : chaque nouveau mail « demande » devient une tâche, avec lien vers le mail et échéance.
+6. **Rangement et tri automatiques des tâches** par liste et par date de réception.
+
+Vous pouvez ne demander qu'une partie (seulement la messagerie, ou seulement To Do).
 
 ## Prérequis
 
@@ -40,11 +44,11 @@ cp -r mails-demandes-vers-todo/mails-demandes-vers-todo ~/.claude/skills/
 
 ## Utilisation
 
-Demander par exemple : « crée une tâche To Do pour chaque mail où j'ai une demande ». Claude recueille vos thèmes et mots-clés, puis met en place les listes, le flux et le tri.
+Demander par exemple : « organise ma boîte mail et crée une tâche To Do pour chaque mail où j'ai une demande ». Claude analyse la messagerie, vous propose une organisation, puis applique le paramétrage que vous validez.
 
 ## Limites
 
-- le flux ne lit que l'objet du mail, pas le corps ;
+- les règles et le flux ne lisent que l'objet et l'expéditeur, pas le corps du mail ;
 - un mail déplacé par une règle Outlook avant la boîte de réception peut ne pas créer de tâche ;
 - deux mails reçus le même jour ont la même échéance ;
 - les tâches anciennes s'affichent « en retard », puisque l'échéance sert de date de réception.
